@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="three.js로 만든 제주 3D 입체 지도. 한라산, 오름, 해안, 풍력발전기, 등대, 돌하르방과 서귀포 관광지 방문자 수를 3차원으로 탐색해요." />
+    <title>제주 3D 관광 지도</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌋</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="top">
+        <h1>🌋 제주 3D 관광 지도</h1>
+        <p id="status">데이터 불러오는 중…</p>
+      </header>
+
+      <aside class="panel layers" id="layers"><h2>보기</h2></aside>
+
+      <nav class="views" id="views"></nav>
+
+      <aside class="panel info" id="info"></aside>
+
+      <footer class="timeline">
+        <button id="play" class="round" aria-label="재생">▶</button>
+        <input id="slider" type="range" min="0" max="0" value="0" />
+        <div class="monthbox"><b id="month">—</b><span id="total"></span></div>
+      </footer>
+
+      <div class="hint">🖱️ 드래그: 회전 · 휠/핀치: 확대 · 우클릭 드래그: 이동 · 막대와 이름표를 눌러 보세요</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
